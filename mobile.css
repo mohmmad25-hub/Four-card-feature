@@ -1,0 +1,152 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100vh;
+    background-color: var(--Very-Light-Gray);
+}
+
+.design {
+    display: grid;
+    width: 375px;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(5, auto);
+    text-align: center;
+    margin: 20px auto;
+}
+
+.title {
+    grid-row:
+        1,
+        span 1;
+    margin: 20px 10px;
+}
+
+.top {
+    margin-bottom: 10px;
+}
+
+.light {
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+.bold {
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    font-size: 1.1rem;
+}
+
+.article {
+    width: 85%;
+    margin-left: 25px;
+}
+
+.vlight {
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+}
+
+.card {
+    margin: 1rem;
+    text-align: left;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 3px solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 0px 10px;
+    position: relative;
+    height: 150px;
+}
+
+.card:nth-child(1) {
+    border-color: var(--Cyan) transparent transparent transparent;
+}
+
+.card:nth-child(2) {
+    border-color: var(--Red) transparent transparent transparent;
+}
+
+.card:nth-child(3) {
+    border-color: var(--Orange) transparent transparent transparent;
+}
+
+.card:nth-child(4) {
+    border-color: var(--Blue) transparent transparent transparent;
+}
+
+h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--Very-Dark-Blue);
+}
+
+p {
+    font-weight: 200;
+    margin-left: 2.5px;
+    color: var(--Grayish-Blue);
+    margin-bottom: 5px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media (min-width: 550px) {
+    .design {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 1440px;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+    }
+    .card {
+        width: 300px;
+        height: 175px;
+    }
+    .card:nth-child(1) {
+        position: absolute;
+        top: 250px;
+        left: 15%;
+    }
+    .card:nth-child(2) {
+        position: absolute;
+        top: 150px;
+        left: 38%;
+    }
+    .card:nth-child(3) {
+        position: absolute;
+        top: 350px;
+        left: 38%;
+    }
+    .card:nth-child(4) {
+        position: absolute;
+        top: 250px;
+        left: 61%;
+    }
+}
